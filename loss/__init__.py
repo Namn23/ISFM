@@ -1,0 +1,1 @@
+from .fusion_loss import make_loss

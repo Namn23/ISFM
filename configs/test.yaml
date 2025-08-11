@@ -1,0 +1,28 @@
+TEST:
+  IMG_SIZE: [480, 640]
+  TASK_CONFIG: ["VIF"]
+  MICRO_BATCH_SIZE: 1
+  CHECKPOINT_PATH: "./best/checkpoints"
+ACCELERATE:
+  PROJECT_NAME: "ISFM"
+  RUN_NAME: "test"
+  EVAL_PERIOD: 1
+  LOG_PERIOD: 20
+OPTIMIZER:
+  EPOCHS: 100
+  DECAY_EPOCHS: [50]
+  LR: 1.0e-4
+  WARMUP_STEPS: 500
+  WARMUP_ITER: 5
+  SCHEDULER: 'cosine' # 'linear' 'cosine'
+MODEL:
+  MAMBA_CONFIG:
+    DEPTHS: [1, 1, 1, 1]
+    EMBED_DIM: 128
+    IMG_SIZE: 128
+INPUT:
+  IMG_SIZE: [128, 128]
+  TASK_CONFIG: ["VIF"]
+  BATCH_SIZE: 1
+  ROOT_DIR: "/home/yyan/zyx/Fusion/Dataset/MSRS"
+
