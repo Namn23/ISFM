@@ -11,18 +11,9 @@ This is official Pytorch implementation of “Interactive Spatial-Frequency Fusi
 
 ## 目录  
 - [项目简介](#项目简介)  
-- [特点与贡献](#特点与贡献)  
 - [安装与环境](#安装与环境)  
 - [数据准备](#数据准备)  
-- [训练](#训练)  
-- [测试 / 推理](#测试--推理)  
-- [代码结构说明](#代码结构说明)  
-- [超参数说明](#超参数说明)  
-- [实验结果](#实验结果)  
-- [可视化 / 示例](#可视化--示例)  
-- [引用](#引用)  
-- [许可协议](#许可协议)  
-- [致谢](#致谢)  
+- [训练/测试](#训练)  
 
 ---
 
@@ -35,12 +26,7 @@ This is official Pytorch implementation of “Interactive Spatial-Frequency Fusi
 
 ---
 
-## 特点与贡献  
 
-- 同时建模 **空间域** 与 **频率域** 特征，并进行交互融合  
-- 结构模块设计灵活，可扩展到不同深度与尺度  
-- 在多个公开数据集上取得优秀性能  
-- 代码模块化，易于复现与扩展  
 
 ---
 
@@ -58,6 +44,7 @@ source venv/bin/activate   # Linux / macOS
 # 安装依赖
 pip install -r requirements.txt
 
+```
 ---
 
 ## 数据准备
@@ -77,6 +64,8 @@ data/
 训练：
 ```bash
 python train.py --config configs/isfm_config.yaml
+```
 测试：
+```bash
 python eval/compute_metrics.py --pred_dir outputs/fused --gt_dir data/test/gt --metrics psnr ssim mi entropy
-
+```
