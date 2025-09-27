@@ -58,7 +58,9 @@ source venv/bin/activate   # Linux / macOS
 # 安装依赖
 pip install -r requirements.txt
 
-## 数据准备  
+---
+
+## 数据准备
 
 数据目录：  
 
@@ -69,6 +71,8 @@ data/
 └── test/
 ├── vis/
 └── ir/
+
+---
 ## 训练/测试  
 训练：
 ```bash
