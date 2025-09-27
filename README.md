@@ -19,13 +19,10 @@
 ## 安装与环境  
 
 ```bash
-git clone https://github.com/Namn23/ISFM.git
-cd ISFM
 
-# 创建虚拟环境（可选）
-python3 -m venv venv
-source venv/bin/activate   # Linux / macOS
-# 或者 Windows: .\venv\Scripts\activate
+conda create -n ISFM python=3.9 -y
+conda activate ISFM
+pip install -r requirements.txt
 
 # 安装依赖
 pip install -r requirements.txt
