@@ -1,4 +1,3 @@
-This is official Pytorch implementation of “Interactive Spatial-Frequency Fusion Mamba for Multi-Modal Image Fusion”
 # ISFM  
 **This is official Pytorch implementation of “Interactive Spatial-Frequency Fusion Mamba for Multi-Modal Image Fusion”**  
 
@@ -50,7 +49,7 @@ pip install -r requirements.txt
 ## 数据准备
 
 数据目录：  
-
+```bash
 data/
 ├── train/
 │ ├── vi/ # 可见光图像
@@ -58,6 +57,7 @@ data/
 └── test/
 ├── vis/
 └── ir/
+```
 
 ---
 ## 训练/测试  
