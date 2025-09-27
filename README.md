@@ -1,5 +1,5 @@
 # ISFM  
-**This is official Pytorch implementation of “Interactive Spatial-Frequency Fusion Mamba for Multi-Modal Image Fusion”**  
+**Interactive Spatial-Frequency Fusion Mamba for Multi-Modal Image Fusion**  
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
 [![Python version](https://img.shields.io/badge/python-3.x-yellow.svg)]()  
