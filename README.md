@@ -20,9 +20,9 @@
 
 ```bash
 
+# 创建虚拟环境
 conda create -n ISFM python=3.9 -y
 conda activate ISFM
-pip install -r requirements.txt
 
 # 安装依赖
 pip install -r requirements.txt
