@@ -51,5 +51,5 @@ python train.py --config configs/isfm_config.yaml
 ```
 测试：
 ```bash
-python eval/compute_metrics.py --pred_dir outputs/fused --gt_dir data/test/gt --metrics psnr ssim mi entropy
+python test.py --config configs/isfm_config.yaml
 ```
