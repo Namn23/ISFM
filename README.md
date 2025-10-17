@@ -47,9 +47,9 @@ data/
 ## 训练/测试  
 训练：
 ```bash
-python train.py --config configs/isfm_config.yaml
+python train.py --config configs/train.yaml
 ```
 测试：
 ```bash
-python test.py --config configs/isfm_config.yaml
+python test.py --config configs/test.yaml
 ```
