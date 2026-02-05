@@ -34,7 +34,7 @@
 **ISFM** is a novel Mamba-based interactive spatial-frequency fusion framework designed for Multi-Modal Image Fusion (MMIF). It aims to fully exploit the complementarity of domain-specific characteristics by incorporating frequency information into the spatial fusion process and leveraging Mamba to capture long-range dependencies.
 Specifically, we propose a Multi-scale Frequency Fusion to adaptively integrates low-frequency and high-frequency components of different modalities in multiple scales. 
 To fully explore the complementarity of domain-specific characteristics, we propose an Interactive Spatial-Frequency Fusion including a Frequency-Guided Mamba and a Frequency-Guided Gate.
-By combining these modules, our ISFM comprehensively integrates complementary information in the spatial and frequency domains. Extensive experiments on six MMIF datasets demonstrate that our method can achieve better performances than other state-of-the-art methods.
+By combining these modules, our ISFM comprehensively integrates complementary information in the spatial and frequency domains. Extensive experiments on six MMIF datasets demonstrate that our method can achieve better performance than other state-of-the-art methods.
 
 
 ## News  
