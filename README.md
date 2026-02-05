@@ -1,10 +1,32 @@
-# ISFM  
-**Interactive Spatial-Frequency Fusion Mamba for Multi-Modal Image Fusion**  
+# Interactive Spatial-Frequency Fusion Mamba for Multi-Modal Image Fusion 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
-[![Python version](https://img.shields.io/badge/python-3.x-yellow.svg)]()  
+<div align="center">
 
-> 本仓库是论文 **“Interactive Spatial-Frequency Fusion Mamba for Multi-Modal Image Fusion”** 的官方 PyTorch 实现。
+<!-- 这里把 2402.xxxxx 替换成你真实的 arXiv ID -->
+<a href="[https://arxiv.org/abs/2402.xxxxx](https://arxiv.org/abs/2602.04405)">
+  <img src="https://img.shields.io/badge/arXiv-2602.04405-b31b1b.svg" alt="arXiv">
+</a>
+
+<!-- 2. 技术栈 (Tech Stack: Python, PyTorch, etc.) -->
+<a href="https://www.python.org/">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue" alt="Python">
+</a>
+<a href="https://pytorch.org/">
+  <img src="https://img.shields.io/badge/PyTorch-2.00%2B-ee4c2c.svg" alt="PyTorch">
+</a>
+
+<!-- MIT License -->
+<a href="https://opensource.org/licenses/MIT">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+</a>
+
+</div>
+
+<div align="center">
+  <img src="assets/teaser.png" width="800">
+</div>
+
+**ISFM** is a novel multi-modal image fusion framework designed to integrate complementary information from different modalities. Unlike traditional CNN- or Transformer-based methods that suffer from limited receptive fields or high computational cost, SFMFusion leverages Mamba to model long-range dependencies with linear complexity. Built upon this foundation, SFMFusion enhances Mamba with full spatial and frequency perceptions through the proposed Spatial-Frequency Enhanced Mamba Block, and efficiently couples fusion with image reconstruction via a three-branch structure. In addition, the Dynamic Fusion Mamba Block enables flexible feature aggregation across branches. Extensive experiments on six MMIF datasets demonstrate that SFMFusion achieves superior performance and provides a promising solution for multi-modal image fusion.
 
 ---
 
