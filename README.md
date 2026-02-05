@@ -54,7 +54,7 @@ ISFM is a Mamba-based interactive spatial-frequency fusion framework for Multi-M
 
 ## Contributions  
 - We introduce a novel Interactive Spatial-Frequency Fusion Mamba (ISFM) framework for MMIF. It provides a distinct perspective for spatial-frequency fusion.
-- We propose a Multi-scale Frequency Fusion (MFF) to effectively fuse frequency information across multiple scales. In addition, we propose an Interactive Spatial Frequency Fusion (ISF) to fully exploit the complemen tarity of spatial-frequency information.
+- We propose a Multi-scale Frequency Fusion (MFF) to effectively fuse frequency information across multiple scales. In addition, we propose an Interactive Spatial Frequency Fusion (ISF) to fully exploit the complementarity of spatial-frequency information.
 - Extensive experiments on IVIF and MIF tasks validate the effectiveness of our method. We also validate our method in helping high-level computer vision tasks.
 
 ## Results  
