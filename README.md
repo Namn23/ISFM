@@ -18,9 +18,26 @@
 </div>
 
 <div align="center">
-  <a href="https://arxiv.org/abs/2602.04405">TIP 2025 Paper</a>
+
+<div>
+    <a href="https://github.com/Namn23" target="_blank">Yixin Zhu</a><sup></sup>,
+    <a href="#" target="_blank">Long Lv</a><sup></sup>,
+    <a href="https://scholar.google.com/citations?user=MfbIbuEAAAAJ&hl=zh-CN" target="_blank">Pingping Zhang</a><sup>*</sup>,
+    <a href="https://scholar.google.com/citations?user=6R4C_6wAAAAJ&hl=zh-CN&oi=sra">Xuehu Liu</a><sup></sup>,
+    <a href="#" target="_blank">Tongdan Tang</a><sup></sup>,
+    <br>
+    <a href="#" target="_blank">Feng Tian</a><sup></sup>,
+    <a href="#" target="_blank">Weibing Sun</a><sup></sup>,
+    <a href="https://scholar.google.com/citations?hl=zh-CN&user=D3nE0agAAAAJ" target="_blank">Huchuan Lu</a><sup></sup>
 </div>
 
+</div>
+
+<br>
+
+<div align="center">
+  <a href="https://arxiv.org/abs/2602.04405">TIP 2025 Paper</a>
+</div>
 
 <div align="center">
   <img src="assets/ISFM.png" width="100%">
@@ -163,21 +180,25 @@ data/
 ### Usage 
 The configuration is defined in the `.yaml` files (e.g., `configs/train.yaml`). Before running the code, please modify the paths to match your local environment.
 
-1)To train the ISFM model from scratch, run:
+1) To train the ISFM model from scratch, run:
 
 ```bash
 python train.py --config configs/train.yaml
 ```
 The training logs and model checkpoints will be automatically saved in output/exp_name/.
 
-2)To evaluate a specific model, modify `TEST.CHECKPOINT_PATH` to point to your pretrained weight, then run:
+2) To evaluate a specific model, modify `TEST.CHECKPOINT_PATH` to point to your pretrained weight, then run:
 ```bash
 python test.py --config configs/test.yaml
 ```
+
+Pre-trained weights are included in `best/checkpoints/`.
+
 **Note**: You can also override the config options directly from the command line without modifying the yaml file:
 ```bash
 python test.py --config configs/test.yaml TEST.CHECKPOINT_PATH "checkpoints/best.pth"
 ```
+
 The testing process produces the following outputs:
 - Fusion Results: The fused images will be saved in the output directory.
 - Evaluation Logs: The quantitative metrics (e.g., EN, SSIM, VIF) will be recorded in a `.log` file within the output folder.
