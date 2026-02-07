@@ -63,10 +63,10 @@ ISFM is a Mamba-based interactive spatial-frequency fusion framework for Multi-M
 
 ### Evaluation of Downstream Tasks
 <div align="center">
-  <img src="assets/tab_det.png" width="100%">
+  <img src="assets/tab_det.png" width="80%">
 </div>
 <div align="center">
-  <img src="assets/tab_seg.png" width="100%">
+  <img src="assets/tab_seg.png" width="80%">
 </div>
 
 ## Visualizations  
@@ -111,10 +111,10 @@ Second, we visualize the effect of the high-frequency enhancement operation.
 ### Evaluation of Downstream Tasks
 We further evaluate the effectiveness of our method in two downstream tasks, i.e., object detection and semantic segmentation.
 <div align="center">
-  <img src="assets/detect.png" width="90%">
+  <img src="assets/detection.png" width="100%">
 </div>
 <div align="center">
-  <img src="assets/seg.png" width="90%">
+  <img src="assets/seg.png" width="100%">
 </div>
 
 ## Reproduction  
@@ -162,6 +162,7 @@ data/
 
 ### Usage 
 The configuration is defined in the `.yaml` files (e.g., `configs/train.yaml`). Before running the code, please modify the paths to match your local environment.
+
 1)To train the ISFM model from scratch, run:
 
 ```bash
@@ -180,6 +181,7 @@ python test.py --config configs/test.yaml TEST.CHECKPOINT_PATH "checkpoints/best
 The testing process produces the following outputs:
 - Fusion Results: The fused images will be saved in the output directory.
 - Evaluation Logs: The quantitative metrics (e.g., EN, SSIM, VIF) will be recorded in a `.log` file within the output folder.
+
 If you already have the fused images and only want to calculate the metrics (or evaluate results from other methods), you can run the evaluation script:
 ```bash
 # Calculate metrics for existing images
