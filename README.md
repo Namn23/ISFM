@@ -139,7 +139,7 @@ pip install -r requirements.txt
 
 ### Datasets
 
-We use the following datasets. Please organize the files following the directory structure.
+We use the following datasets. Please organize the files following the dataset directory structure.
 
 | Datasets | Download link |
 |:--------|:-----------|
@@ -149,7 +149,7 @@ We use the following datasets. Please organize the files following the directory
 | **Harvard** | [Download here](https://www.med.harvard.edu/AANLIB/home.html) | 
 
 
-Directory structure is as followed, note that open your config file and modify `INPUT.ROOT_DIR` to point to your downloaded dataset directory:  
+The dataset directory structure is organized as follows. Please open your configuration file and modify `INPUT.ROOT_DIR` to point to the path of your downloaded dataset:
 ```bash
 data/
 ├── train/
@@ -169,13 +169,21 @@ python train.py --config configs/train.yaml
 ```
 The training logs and model checkpoints will be automatically saved in output/exp_name/.
 
-2)To evaluate a specific model, modify TEST.CHECKPOINT_PATH to point to your pretrained weight, then run:
+2)To evaluate a specific model, modify `TEST.CHECKPOINT_PATH` to point to your pretrained weight, then run:
 ```bash
 python test.py --config configs/test.yaml
 ```
 **Note**: You can also override the config options directly from the command line without modifying the yaml file:
 ```bash
 python test.py --config configs/test.yaml TEST.CHECKPOINT_PATH "checkpoints/best.pth"
+```
+The testing process produces the following outputs:
+- Fusion Results: The fused images will be saved in the output directory.
+- Evaluation Logs: The quantitative metrics (e.g., EN, SSIM, VIF) will be recorded in a `.log` file within the output folder.
+If you already have the fused images and only want to calculate the metrics (or evaluate results from other methods), you can run the evaluation script:
+```bash
+# Calculate metrics for existing images
+python eval/test_metric.py
 ```
 
 ## Citation  
