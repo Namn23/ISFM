@@ -4,15 +4,15 @@
 
 <!-- 这里把 2402.xxxxx 替换成你真实的 arXiv ID -->
 <a href="[https://arxiv.org/abs/2602.04405](https://arxiv.org/abs/2602.04405)">
-  <img src="https://img.shields.io/badge/arXiv-2602.04405-b31b1b?logo=arxiv&logoColor=white.svg" alt="arXiv">
+  <img src="https://img.shields.io/badge/arXiv-2602.04405-b31b1b?logo=arxiv&logoColor=red" alt="arXiv">
 </a>
 <!-- 2. 技术栈 -->
-<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white" alt="Python"></a>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=blue" alt="Python"></a>
 <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.00%2B-ee4c2c?logo=pytorch&logoColor=white.svg" alt="PyTorch"></a>
 <a href="https://github.com/state-spaces/mamba"><img src="https://img.shields.io/badge/🐍%20Mamba-1.2.0-green" alt="Mamba"></a>
 <!-- MIT License -->
 <a href="https://opensource.org/licenses/MIT">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?logo=opensourceinitiative&logoColor=white.svg" alt="License">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?logo=opensourceinitiative&logoColor=yellow" alt="License">
 </a>
 
 </div>
@@ -61,6 +61,14 @@ ISFM is a Mamba-based interactive spatial-frequency fusion framework for Multi-M
   <img src="assets/MIF_result.png" width="100%">
 </div>
 
+### Evaluation of Downstream Tasks
+<div align="center">
+  <img src="assets/tab_det.png" width="100%">
+</div>
+<div align="center">
+  <img src="assets/tab_seg.png" width="100%">
+</div>
+
 ## Visualizations  
 ### Qualitative Comparison
 Comparison with state-of-the-art methods on MMIF datasets.
@@ -81,14 +89,6 @@ Comparison with state-of-the-art methods on MMIF datasets.
 </div>
 <div align="center">
   <img src="assets/mrispect.png" width="100%">
-</div>
-
-### Evaluation of Downstream Tasks
-<div align="center">
-  <img src="assets/tab_det.png" width="100%">
-</div>
-<div align="center">
-  <img src="assets/tab_seg.png" width="100%">
 </div>
 
 ### Feature Map Visualization
@@ -129,7 +129,7 @@ We further evaluate the effectiveness of our method in two downstream tasks, i.e
 ```bash
 
 # Create a virtual environment
-conda create -n ISFM python=3.9 -y
+conda create -n ISFM python=3.8 -y
 conda activate ISFM
 
 # Install dependencies
@@ -149,7 +149,7 @@ We use the following datasets. Please organize the files following the directory
 | **Harvard** | [Download here](https://www.med.harvard.edu/AANLIB/home.html) | 
 
 
-Directory structure：  
+Directory structure is as followed, note that open your config file and modify `INPUT.ROOT_DIR` to point to your downloaded dataset directory:  
 ```bash
 data/
 ├── train/
@@ -161,13 +161,21 @@ data/
 ```
 
 ### Usage 
-1)Train：
+The configuration is defined in the `.yaml` files (e.g., `configs/train.yaml`). Before running the code, please modify the paths to match your local environment.
+1)To train the ISFM model from scratch, run:
+
 ```bash
 python train.py --config configs/train.yaml
 ```
-2)Test：
+The training logs and model checkpoints will be automatically saved in output/exp_name/.
+
+2)To evaluate a specific model, modify TEST.CHECKPOINT_PATH to point to your pretrained weight, then run:
 ```bash
 python test.py --config configs/test.yaml
+```
+**Note**: You can also override the config options directly from the command line without modifying the yaml file:
+```bash
+python test.py --config configs/test.yaml TEST.CHECKPOINT_PATH "checkpoints/best.pth"
 ```
 
 ## Citation  
