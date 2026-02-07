@@ -4,20 +4,15 @@
 
 <!-- 这里把 2402.xxxxx 替换成你真实的 arXiv ID -->
 <a href="[https://arxiv.org/abs/2602.04405](https://arxiv.org/abs/2602.04405)">
-  <img src="https://img.shields.io/badge/arXiv-2602.04405-b31b1b.svg" alt="arXiv">
+  <img src="https://img.shields.io/badge/arXiv-2602.04405-b31b1b?logo=arxiv&logoColor=white.svg" alt="arXiv">
 </a>
-
-<!-- 2. 技术栈 (Tech Stack: Python, PyTorch, etc.) -->
-<a href="https://www.python.org/">
-  <img src="https://img.shields.io/badge/Python-3.8%2B-blue" alt="Python">
-</a>
-<a href="https://pytorch.org/">
-  <img src="https://img.shields.io/badge/PyTorch-2.00%2B-ee4c2c.svg" alt="PyTorch">
-</a>
-
+<!-- 2. 技术栈 -->
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white" alt="Python"></a>
+<a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.00%2B-ee4c2c?logo=pytorch&logoColor=white.svg" alt="PyTorch"></a>
+<a href="https://github.com/state-spaces/mamba"><img src="https://img.shields.io/badge/🐍%20Mamba-1.2.0-green" alt="Mamba"></a>
 <!-- MIT License -->
 <a href="https://opensource.org/licenses/MIT">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?logo=opensourceinitiative&logoColor=white.svg" alt="License">
 </a>
 
 </div>
@@ -58,6 +53,7 @@ ISFM is a Mamba-based interactive spatial-frequency fusion framework for Multi-M
 - Extensive experiments on IVIF and MIF tasks validate the effectiveness of our method. We also validate our method in helping high-level computer vision tasks.
 
 ## Results  
+### Quantitative Comparison
 <div align="center">
   <img src="assets/IVIF_result.png" width="100%">
 </div>
@@ -66,6 +62,8 @@ ISFM is a Mamba-based interactive spatial-frequency fusion framework for Multi-M
 </div>
 
 ## Visualizations  
+### Qualitative Comparison
+Comparison with state-of-the-art methods on MMIF datasets.
 <div align="center">
   <img src="assets/msrs.png" width="100%">
 </div>
@@ -85,7 +83,46 @@ ISFM is a Mamba-based interactive spatial-frequency fusion framework for Multi-M
   <img src="assets/mrispect.png" width="100%">
 </div>
 
+### Evaluation of Downstream Tasks
+<div align="center">
+  <img src="assets/tab_det.png" width="100%">
+</div>
+<div align="center">
+  <img src="assets/tab_seg.png" width="100%">
+</div>
+
+### Feature Map Visualization
+To validate the effectiveness of the proposed modules, we visualize the extracted features of different modules.
+
+<div align="center">
+  <img src="assets/abs.png" width="90%">
+</div>
+
+### Frequency Domain Decomposition
+To visually validate the effectiveness of our frequency domain fusion mechanism,we conduct two kinds of visualization experiments. First,we show the DWT decomposition of the source images and the corresponding features fused by the proposed MFF.
+<div align="center">
+  <img src="assets/dwt.png" width="90%">
+</div>
+Second, we visualize the effect of the high-frequency enhancement operation.
+<div align="center">
+  <img src="assets/enh.png" width="90%">
+</div>
+
+### Evaluation of Downstream Tasks
+We further evaluate the effectiveness of our method in two downstream tasks, i.e., object detection and semantic segmentation.
+<div align="center">
+  <img src="assets/detect.png" width="90%">
+</div>
+<div align="center">
+  <img src="assets/seg.png" width="90%">
+</div>
+
 ## Reproduction  
+### Requirements 
+- Python 3.8
+- PyTorch 2.0.1
+- CUDA 11.7
+- mamba-ssm 1.2.0
 
 ### Installation 
 
