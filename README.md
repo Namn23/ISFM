@@ -116,7 +116,7 @@ To validate the effectiveness of the proposed modules, we visualize the extracte
 </div>
 
 ### Frequency Domain Decomposition
-To visually validate the effectiveness of our frequency domain fusion mechanism,we conduct two kinds of visualization experiments. First,we show the DWT decomposition of the source images and the corresponding features fused by the proposed MFF.
+To visually validate the effectiveness of our frequency domain fusion mechanism, we conduct two kinds of visualization experiments. First, we show the DWT decomposition of the source images and the corresponding features fused by the proposed MFF.
 <div align="center">
   <img src="assets/dwt.png" width="90%">
 </div>
@@ -180,19 +180,19 @@ data/
 ### Usage 
 The configuration is defined in the `.yaml` files (e.g., `configs/train.yaml`). Before running the code, please modify the paths to match your local environment.
 
-1) To train the ISFM model from scratch, run:
+#### Train
+To train the ISFM model from scratch, run:
 
 ```bash
 python train.py --config configs/train.yaml
 ```
 The training logs and model checkpoints will be automatically saved in output/exp_name/.
 
-2) To evaluate a specific model, modify `TEST.CHECKPOINT_PATH` to point to your pretrained weight, then run:
+#### Test
+Pre-trained weights are included in `best/checkpoints/`. To evaluate a specific model, modify `TEST.CHECKPOINT_PATH` to point to your pretrained weight, then run:
 ```bash
 python test.py --config configs/test.yaml
 ```
-
-Pre-trained weights are included in `best/checkpoints/`.
 
 **Note**: You can also override the config options directly from the command line without modifying the yaml file:
 ```bash
