@@ -36,7 +36,7 @@
 <br>
 
 <div align="center">
-  <a href="https://arxiv.org/abs/2602.04405">TIP 2025 Paper</a>
+  <a href="https://ieeexplore.ieee.org/document/11396436">TIP 2025 Paper</a>
 </div>
 
 <div align="center">
@@ -50,7 +50,7 @@ By combining these modules, our ISFM comprehensively integrates complementary in
 
 
 ## News  
-Exciting news! Our paper has been accepted by the TIP 2025! 🎉🎉 [Paper](https://arxiv.org/abs/2602.04405)
+Exciting news! Our paper has been accepted by the TIP 2025! 🎉🎉 [Paper](https://ieeexplore.ieee.org/document/11396436)
 
 
 ## Table of Contents
